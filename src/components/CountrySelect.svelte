@@ -28,15 +28,21 @@
   }
   p.big {
     font-size: 2rem;
+    margin: 0.5rem 0rem;
   }
 </style>
 
 <h2>enter your age</h2>
-<input type="number" bind:value={age} min="0" max="200" />
+<input
+  type="number"
+  bind:value={age}
+  min="0"
+  max="200"
+  style="height:50px;font-size:14pt;" />
 
 <h3>pick a location</h3>
 
-<select bind:value={selectedLocation}>
+<select bind:value={selectedLocation} style="height:50px;font-size:14pt;">
   {#each locations as loc}
     <option value={loc.slug}>{loc.name}</option>
   {/each}

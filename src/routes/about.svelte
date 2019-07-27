@@ -10,12 +10,17 @@
   and the Svelte framework
   <a href="https://sapper.svelte.dev/" target="_blank">Sapper</a>
   .
-  <br />
+</p>
+<p>
   The github repo for this project can be found
   <a href="https://github.com/nickbouldien/can-i-drink-yet" target="_blank">
     here
   </a>
-  .
-  <br />
-  Feel free to contribute and add any locations.
+  . Feel free to contribute and add any locations.
+</p>
+<p>
+  <small>
+    (keep in mind that the data shown may not (won't) be 100% correct). This is
+    not legal advice)
+  </small>
 </p>
