@@ -64,14 +64,5 @@
     <li>
       <a class={segment === 'about' ? 'selected' : ''} href="about">about</a>
     </li>
-
-    <li>
-      <a
-        rel="prefetch"
-        class={segment === 'blog' ? 'selected' : ''}
-        href="blog">
-        blog
-      </a>
-    </li>
   </ul>
 </nav>
