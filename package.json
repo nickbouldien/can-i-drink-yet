@@ -1,7 +1,9 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "can-i-drink-yet",
+  "description": "a site to let you know if you're old enough to drink in a given location",
   "version": "0.0.1",
+  "author": "nick bouldien",
+  "repository": "https://github.com/nickbouldien/can-i-drink-yet",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build --legacy",
