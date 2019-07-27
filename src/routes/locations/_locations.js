@@ -11,7 +11,7 @@ const locations = [
     population: 37000000,
     name: "Canada",
     continent: "North America",
-    slug: "brasil"
+    slug: "canada"
   },
   {
     drinkingAge: 18,

@@ -1,39 +1,58 @@
 <script>
-  import locations from "../locations.js";
+  import locations from "../routes/locations/_locations";
 
   function getDefaultLocation() {
-    // TODO
-    return "unitedStates";
+    // TODO - get user's location (if allowed)?? then look up the location based
+    return "united-states";
   }
   export let selectedLocation = getDefaultLocation();
+  export let selectedLocationData = locations.find(
+    loc => loc.slug === selectedLocation
+  );
+
   export let age = Math.floor(Math.random() * 100 + 1);
 </script>
 
 <style>
-  h1 {
-    color: blue;
+  input {
+    margin-bottom: 1rem;
+  }
+  select {
+    margin-bottom: 1rem;
+  }
+  p.green {
+    color: green;
+  }
+  p.red {
+    color: red;
+  }
+  p.big {
+    font-size: 2rem;
   }
 </style>
 
-<h3>enter your age</h3>
+<h2>enter your age</h2>
 <input type="number" bind:value={age} min="0" max="200" />
 
 <h3>pick a location</h3>
+
 <select bind:value={selectedLocation}>
-  {#each Object.entries(locations) as [key, loc]}
-    <option value={key}>{loc.name}</option>
+  {#each locations as loc}
+    <option value={loc.slug}>{loc.name}</option>
   {/each}
 </select>
 
-<p>age limit in selected location: {locations[selectedLocation].drinkingAge}</p>
-
-{#if locations[selectedLocation].flag_image}
-  <img src={locations[selectedLocation].flag_image} alt="location flag" />
+{#if selectedLocationData.flag_image}
+  <img src={selectedLocationData.flag_image} alt="location flag" />
 {/if}
 
-<h4>verdict:</h4>
-{#if age >= locations[selectedLocation].drinkingAge}
-  <p>yup!</p>
+<p>age limit in selected location: {selectedLocationData.drinkingAge}</p>
+
+<h4>
+  <strong>verdict:</strong>
+</h4>
+{#if age >= locations.find(loc => loc.slug === selectedLocation).drinkingAge}
+  <p class="green big">yup!</p>
 {:else}
-  <p>nope!</p>
+  <p class="red big">nope!</p>
 {/if}
