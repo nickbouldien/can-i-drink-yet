@@ -16,7 +16,8 @@
   <a href="https://github.com/nickbouldien/can-i-drink-yet" target="_blank">
     here
   </a>
-  . Feel free to contribute and add any locations.
+  . Feel free to contribute and add any missing locations/data or correct
+  anything that is incorrect .
 </p>
 <p>
   <small>

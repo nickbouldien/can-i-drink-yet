@@ -14,6 +14,9 @@
 </script>
 
 <style>
+  h4 {
+    text-align: center;
+  }
   input {
     margin-bottom: 1rem;
   }
@@ -31,6 +34,15 @@
     margin: 0.5rem 0rem;
   }
 </style>
+
+<h4>
+  <strong>verdict:</strong>
+  {#if age >= locations.find(loc => loc.slug === selectedLocation).drinkingAge}
+    <p class="green big">yup!</p>
+  {:else}
+    <p class="red big">nope!</p>
+  {/if}
+</h4>
 
 <h2>enter your age</h2>
 <input
@@ -53,12 +65,3 @@
 {/if}
 
 <p>age limit in selected location: {selectedLocationData.drinkingAge}</p>
-
-<h4>
-  <strong>verdict:</strong>
-</h4>
-{#if age >= locations.find(loc => loc.slug === selectedLocation).drinkingAge}
-  <p class="green big">yup!</p>
-{:else}
-  <p class="red big">nope!</p>
-{/if}
