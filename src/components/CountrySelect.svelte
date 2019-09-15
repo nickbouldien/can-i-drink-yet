@@ -5,8 +5,9 @@
     // TODO - get user's location (if allowed)?? then look up the location based
     return "united-states";
   }
-  export let selectedLocation = getDefaultLocation();
-  export let selectedLocationData = locations.find(
+  let selectedLocation = getDefaultLocation();
+
+  $: selectedLocationData = locations.find(
     loc => loc.slug === selectedLocation
   );
 
