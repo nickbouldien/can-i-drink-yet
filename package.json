@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "author": "nick bouldien",
   "repository": "https://github.com/nickbouldien/can-i-drink-yet",
+  "license": "MIT",
   "scripts": {
     "dev": "sapper dev",
     "build:original": "sapper build --legacy",
