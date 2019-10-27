@@ -15,12 +15,12 @@ Open up [localhost:3000](http://localhost:3000) to see the site running on the d
 For more details on Svelte and/or Sapper, look at [svelte.dev/](https://svelte.dev/) or [sapper.svelte.dev](https://sapper.svelte.dev) for more info.
 
 
-## contributing (hacktoberfest)
+## contributing
 feel free to make a pull request to add a location (found in `src/routes/locations/_locations.js`). Please try to make them at least somewhat accurate (a source of where you're getting your data (article, country stat site, etc.) as part of your pull request is preferred).  One location per contributor please (to allow more people to practice making pull requests)
 
 as of now, the location objects look like the below example. please try to follow the formatting when adding new location objects
 
-```json
+```js
   {
     drinkingAge: 18,
     population: 209300000,
