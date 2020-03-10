@@ -23,6 +23,7 @@
   }
   select {
     margin-bottom: 1rem;
+    padding-right: 1.5rem;
   }
   p.green {
     color: green;
